@@ -15,12 +15,12 @@ var spika = require('./index.js');
 
 
 init.host = "localhost";
-init.port = 8181;
+init.port = 8085;
 init.urlPrefix = '/spika';
 init.socketNameSpace = '/spika';
 init.imageDownloadURL = "http://" + init.host + "/:" + init.port + init.urlPrefix + "/media/images/";
 init.noavatarImg = "http://" + init.host + ":" + init.port + init.urlPrefix + "/img/noavatar.png";
-init.chatDatabaseUrl = "mongodb://localhost/test";
+init.chatDatabaseUrl = "mongodb://localhost:27017/simplemessenger";
 init.dbCollectionPrefix = "spika_";
 init.uploadDir = '../../public/uploads/';
 init.sendAttendanceMessage = true;

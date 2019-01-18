@@ -50,10 +50,10 @@ LoginActionHandler.prototype.attach = function(io,socket){
             if(_.isEmpty(user)){
                 
 
+                UsersManager.addUser(param.userID,user.name,user.avatarURL,param.roomID,user.token);
             }
             
             
-            UsersManager.addUser(param.userID,user.name,user.avatarURL,param.roomID,user.token);
             UsersManager.pairSocketIDandUserID(param.userID,socket.id);            
 
             if(Settings.options.sendAttendanceMessage)

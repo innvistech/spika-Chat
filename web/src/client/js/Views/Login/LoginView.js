@@ -35,7 +35,8 @@ var LoginView = Backbone.View.extend({
             name:'',
             avatarURL:'',
             roomID:'',
-            id:''
+            id:'',
+  token:''
         }
 
         if(!_.isUndefined(loginInfo)){
@@ -46,7 +47,8 @@ var LoginView = Backbone.View.extend({
         SS('#input-avatarurl').val(defaultValues.avatarURL);
         SS('#input-room').val(defaultValues.roomID);
         SS('#input-id').val(defaultValues.id);
-        
+  SS('#input-token').val(defaultValues.token);
+
         SS('#btn-enter').on('click',function(){
                              
             if(self.validate()){
@@ -55,8 +57,8 @@ var LoginView = Backbone.View.extend({
                 var avatar = SS('#input-avatarurl').val();
                 var room = SS('#input-room').val();
                 var id = SS('#input-id').val();
-
-                app.login(id,name,avatar,room,function(){
+var token = SS('#input-token').val();
+                app.login(id,name,avatar,room,token,function(){
                     
                     U.goPage('main');
                                         
@@ -74,7 +76,7 @@ var LoginView = Backbone.View.extend({
         var avatar = SS('#input-avatarurl').val();
         var room = SS('#input-room').val();
         var id = SS('#input-id').val();
-
+var token = SS('#input-token').val();
         var result = true;
 
         SS('.form-group').removeClass('has-error');

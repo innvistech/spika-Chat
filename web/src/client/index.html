@@ -44,10 +44,57 @@
     </script>
     
     </body>
-    <script type="text/javascript" src="js/adapter.js"></script>
-    <!-- <script type="text/javascript" src="js/bundle.js"></script> -->
+    <!-- <script type="text/javascript" src="js/adapter.js"></script> -->
+   <script type="text/javascript" src="js/bundle.js"></script>
     
+<!-- <script>
+var SpikaBaseURL = 'spika';
+  SpikaAdapter.attach({
 
+spikaURL: SpikaBaseURL,
+attachTo : "chat", // id or div to show into
+user : {
+    id : UserManager.user.id,
+    name : UserManager.user.name,
+    avatarURL : UserManager.user.avatar,
+    roomID : channel
+},
+config : {
+    apiBaseUrl : window.location.origin + SpikaBaseURL + "/v1",
+    socketUrl : window.location.origin + SpikaBaseURL,
+    showSidebar : false,
+    showTitlebar : false
+},
+listener : {
+
+    onPageLoad: function(){
+        
+    },
+    onNewMessage:function(obj){
+
+    },
+    onNewUser:function(obj){
+
+    },
+    onUserLeft:function(obj){
+
+    },
+    OnUserTyping:function(obj){
+
+    },
+    OnMessageChanges:function(obj){
+
+    },
+    onOpenMessage:function(obj){
+        return true;
+    },
+    OnOpenFile:function(obj){
+        return true;
+    }
+}
+
+});
+</script> -->
 </html>
 
 

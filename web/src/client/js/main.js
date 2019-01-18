@@ -28,7 +28,7 @@ ViewHelpers.attach();
 // app instance (global)
 window.app = {
     
-    login:function(userId,name,avatarURL,roomID,callBack){
+    login:function(userId,name,avatarURL,roomID,token,callBack){
         
         var self = this;
         
@@ -41,7 +41,7 @@ window.app = {
         
             UrlGenerator.userLogin(), 
             
-            {userID: userId, name: name, avatarURL: avatarURL, roomID: roomID},
+            {userID: userId, name: name, avatarURL: avatarURL, roomID: roomID,token:token},
             
             // success
             function(data){
@@ -50,7 +50,8 @@ window.app = {
                     name : name,
                     avatar : avatarURL,
                     roomID : roomID,
-                    userID: userId
+                    userID: userId,
+                    token:token
                 });
     
                 LoginUserManager.setLoginUser(name, avatarURL, roomID, userId, data.token);
@@ -59,7 +60,8 @@ window.app = {
                     id:userId,
                     name:name,
                     avatarURL:avatarURL,
-                    roomID:roomID
+                    roomID:roomID,
+                    token : token
                 }
                 
                 Cookies.set(Const.COOKIE_KEY_LOGININFO, loginInfo);

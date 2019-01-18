@@ -32,7 +32,7 @@ var User = require('../Models/user.js');
                 id: id,
                 name:name,
                 avatarURL:avatarURL,
-                token:token
+                token:"00000000-0000-0000-0000-000000000001"
             });
             
             this.roomID = roomID;

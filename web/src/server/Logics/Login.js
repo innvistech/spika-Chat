@@ -24,7 +24,7 @@ var LoginLogic = {
         var avatarURL = param.avatarURL;
         var roomID = param.roomID;
         var userID = param.userID;
-      var spikaToken = param.spikaToken;
+      var spikaToken = param.token;
 
         if(Utils.isEmpty(name)){
 

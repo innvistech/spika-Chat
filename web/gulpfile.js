@@ -15,7 +15,7 @@ var browserify = require('browserify'),
     fs = require('fs-extra'),
     mocha = require('gulp-mocha'),
     exit = require('gulp-exit');
-  //  jsdoc = require("gulp-jsdoc");
+    // jsdoc = require("gulp-jsdoc");
 
 var props = {
     entries: sourceFile,
@@ -92,20 +92,20 @@ gulp.task('build-apidoc', function(){
 });
 
 // var JSDocTemplate = {
-	// path: "ink-docstrap",
-    // systemName: "Spika Web Client",
-    // theme: "cosmo",
-    // linenums: true
+// 	path: "ink-docstrap",
+//     systemName: "Spika Web Client",
+//     theme: "cosmo",
+//     linenums: true
 // };
 
 // var JSDocOptions = {
-    // outputSourceFiles: true
+//     outputSourceFiles: true
 // };
 
 // gulp.task("jsdoc", function() {
-	// gulp.src(["./src/client/**/*.js", "README.md"])
-		// .pipe(jsdoc.parser(infos))
-		// .pipe(jsdoc.generator("./doc/WebClient", JSDocTemplate, JSDocOptions))
+// 	gulp.src(["./src/client/**/*.js", "README.md"])
+// 		.pipe(jsdoc.parser(infos))
+// 		.pipe(jsdoc.generator("./doc/WebClient", JSDocTemplate, JSDocOptions))
 // });
 
 

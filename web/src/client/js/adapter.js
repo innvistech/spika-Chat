@@ -46,7 +46,7 @@ var SpikaAdapter = {
             iframe.frameBorder = 0;
         
             var node = document.getElementById(options.attachTo);
-       
+        
             while (node.hasChildNodes()) {
                 node.removeChild(node.firstChild);
             }
